@@ -1,0 +1,112 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Wipro</groupId>
+  <artifactId>VtigerApplicationNew</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+     <maven.compiler.source>1.8</maven.compiler.source>
+     <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
+<profiles>
+	
+	<profile>
+		<id>Smoke</id>
+		<build>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0-M8</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>testng_SmokeSuite.xml</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+      			</plugin>
+      		</plugins>
+		</build>
+	</profile>
+	
+	<profile>
+		<id>Regression</id>
+		<build>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0-M8</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>testng_RegressionSuite.xml</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+      			</plugin>
+      		</plugins>
+		</build>
+	</profile>
+	
+</profiles>
+  
+  <dependencies >	  
+	  
+  <!-- This is an Automation Tool -->
+  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.4.0</version>
+</dependency>
+<!-- This is unit testing tool to develop the Test scripts  -->
+  <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.4.0</version>
+</dependency>
+<!-- Apache POI is used to read and write data into Excel -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>4.1.2</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>4.1.2</version>
+</dependency>
+<!-- This dependency is used for all file related actions -->
+  <dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.11.0</version>
+</dependency>
+<!-- This dependency will automatically download the required driver executable file for any browser-->
+  <dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>3.8.1</version>
+</dependency>
+<!-- It provides communication with MySQL Database -->
+  <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.28</version>
+</dependency>
+<!-- It is used to generate an Test Reports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.24</version>
+    <scope>provided</scope>
+</dependency>
+
+  </dependencies>
+  
+</project>

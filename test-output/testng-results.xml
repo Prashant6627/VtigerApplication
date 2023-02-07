@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-06T21:30:47 IST" name="Default suite" finished-at="2023-02-06T21:30:50 IST" duration-ms="3047">
+    <groups>
+    </groups>
+    <test started-at="2023-02-06T21:30:47 IST" name="Default test" finished-at="2023-02-06T21:30:50 IST" duration-ms="3047">
+      <class name="vtiger.Practice.SampleJDBCExecuteUpdate">
+        <test-method signature="sampleJDBC()[pri:0, instance:vtiger.Practice.SampleJDBCExecuteUpdate@56cdfb3b]" started-at="2023-02-06T21:30:47 IST" name="sampleJDBC" finished-at="2023-02-06T21:30:50 IST" duration-ms="2836" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleJDBC -->
+      </class> <!-- vtiger.Practice.SampleJDBCExecuteUpdate -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
